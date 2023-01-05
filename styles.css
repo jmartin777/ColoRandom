@@ -88,6 +88,8 @@ box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 35px;
+    margin-right: 233px
 }
 .right-section {
   float: right;
@@ -96,6 +98,7 @@ box-sizing: border-box;
   background-color: white;
   border: 5px solid black;
   padding: 33px;
+  margin-right: -116px
   }
 
 main {
