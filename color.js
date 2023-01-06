@@ -1,8 +1,8 @@
 class Color {
     constructor() {
         this.locked = false;
-        this.color;
-        this.getRandomColor()
+        this.color = null
+       
     }
      getRandomColor() {
         var letters = '0123456789ABCDEF';
@@ -11,5 +11,6 @@ class Color {
           hexColor += letters[Math.floor(Math.random() * 16)];
         }
         this.color = hexColor;
+        return hexColor
       }
   }

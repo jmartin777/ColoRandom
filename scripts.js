@@ -3,7 +3,12 @@ var color2 = new Color()
 var color3 = new Color()
 var color4 = new Color()
 var color5 = new Color()
-var palette1 = new Palette(color1, color2, color3, color4, color5)
+var firstColor = color1.getRandomColor()
+var secondColor = color2.getRandomColor()
+var thirdColor = color3.getRandomColor()
+var fourthColor = color4.getRandomColor()
+var fifthColor = color5.getRandomColor()
+var allColors = new Palette(firstColor, secondColor, thirdColor, fourthColor, fifthColor )
 var locked1 = document.querySelector('#lock1')
 var locked2 = document.querySelector('#lock2')
 var locked3 = document.querySelector('#lock3')
@@ -15,54 +20,33 @@ var unlocked3 = document.querySelector('#unlock3')
 var unlocked4 = document.querySelector('#unlock4')
 var unlocked5 = document.querySelector('#unlock5')
 var boxes = document.querySelectorAll('.box')
+var colorBoxContainer = document.querySelector('.color-boxes-container')
 var codes = document.querySelectorAll('.color-hex')
 
 window.addEventListener('load',setRandomColor);
-// window.addEventListener('load',setRandomCode)
-window.addEventListener('click',lockColor1)
-window.addEventListener('click', unlockColor)
 
-function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var hexColor = '#';
-  for (var i = 0; i < 6; i++) {
-    hexColor += letters[Math.floor(Math.random() * 16)];
-  } console.log(hexColor)
-  return hexColor;
-}
+
+
 function setRandomColor() {
-  for (let i = 0; i < boxes.length; i++) {
-      boxes[i].style.backgroundColor = getRandomColor();
-    }
-  }
-function setRandomCode() {
-  for (let i = 0; i < 6; i++) {
-    codes.innerText = getRandomColor();
+  for (let i = 0; i < 5; i++) {
+    boxes[i].innerHTML = `
+    <div class="box-details" style="background-color:${allColors.colors[i]}">
+    <p class="color-hex" id="code1">${allColors.colors[i]}</p>
+      <span class="material-symbols-outlined">
+      <button class="unlock-emoji"id="unlock1">🔓</button>
+      <button class="lock-emoji hidden" id="lock1">🔒</button>
+    </span>
+  </div>`
   }
 }
-   function lockColor1() {
+//    function lockColor() {
    
-    unlocked1.classList.add('hidden')
-    locked1.classList.remove('hidden');
-  };
+//     unlocked1.classList.add('hidden')
+//     locked1.classList.remove('hidden');
+//   };
 
-function unlockColor(event) {
-  console.log(event.target)
-  console.log(event.target.classList.contains('hidden'))
-  unlocked1.classList.remove('hidden')
-  locked1.classList.add('hidden')
-
-  // hideElement(locked1)
-  // showElement(unlocked1)
-
-}
-
-function hideElement(element) {
-  element.classList.add('hidden')
-
-}
-
-function showElement(element) {
-  element.classList.remove('hidden')
-} 
+// function unlockColor(event) {
+//   unlocked1.classList.remove('hidden')
+//   locked1.classList.add('hidden')
+// }
 
