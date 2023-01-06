@@ -7,21 +7,18 @@
       <title>ColoRandom</title>
     </head>
 <body>
-  <main> 
+  <main>
    <div class="wrapper1">
-    <h1>COLORANDOM</h1> 
-
-
-
-
-    <section class="color-boxes-container"> 
+    <h1>COLORANDOM</h1>
+    <section class="color-boxes-container">
       <div class="color-box" id="color1">
         <div class="swatch"></div>
           <p class="box" id="box1"></p>
             <div class="box-details">
-              <p class="color-hex">#0000ff</p>
-                <span class="material-symbols-outlined" id="lock1"> 
-                <p class="unlock-emoji">🔓</p>
+              <p class="color-hex">#0000FF</p>
+                <span class="material-symbols-outlined">
+                <button class="unlock-emoji"id="unlock1">🔓</button>
+                <button class="lock-emoji hidden" id="lock1">🔒</button>
               </span>
             </div>
           </div>
@@ -29,19 +26,21 @@
         <div class="swatch"></div>
           <p class="box" id="box2"></p>
             <div class="box-details">
-              <p class="color-hex">#ff0000</p>
-                <span class="material-symbols-outlined" id="lock2">
-                  <p class="unlock-emoji">🔓</p>
+              <p class="color-hex">#FF0000</p>
+                <span class="material-symbols-outlined">
+                  <button class="unlock-emoji"id="unlock2">🔓</button>
+                  <button class="lock-emoji hidden"id="lock2">🔒</button>
               </span>
-            </div> 
-          </div> 
+            </div>
+          </div>
       <div class="color-box" id="color3">
         <div class="swatch"></div>
           <p class="box" id="box3"></p>
             <div class="box-details">
-              <p class="color-hex">#ffff00</p>
-                <span class="material-symbols-outlined" id="lock3">
-                <p class="unlock-emoji">🔓</p>
+              <p class="color-hex">#FFFF00</p>
+                <span class="material-symbols-outlined">
+                <button class="unlock-emoji" id="unlock3">🔓</button>
+                <button class="lock-emoji hidden" id="lock3">🔒</button>
               </span>
             </div>
           </div>
@@ -49,9 +48,10 @@
         <div class="swatch"></div>
           <p class="box" id="box4"></p>
             <div class="box-details">
-              <p class="color-hex">#ffffff</p>
-                <span class="material-symbols-outlined" id="lock4">
-                  <p class="unlock-emoji">🔓</p>
+              <p class="color-hex">#FFFFFF</p>
+                <span class="material-symbols-outlined">
+                  <button class="unlock-emoji" id="unlock4">🔓</button>
+                  <button class="lock-emoji hidden"id="lock4">🔒</button>
                 </span>
               </div>
             </div>
@@ -59,17 +59,17 @@
         <div class="swatch"></div>
           <p class="box" id="box5"></p>
             <div class="box-details">
-                <p class="color-hex">#ffa500</p>
-                  <span class="material-symbols-outlined" id="lock5">
-                    <p class="unlock-emoji">🔓</p>
+                <p class="color-hex">#FFA500</p>
+                  <span class="material-symbols-outlined">
+                    <button class="unlock-emoji" id="unlock5">🔓</button>
+                    <button class="lock-emoji hidden" id="lock5 hidden">🔒</button>
     </section>
               </span>
-            <section class="buttons"> 
+            <section class="buttons">
               <button class="buttons" id="new">New Palette</button>
               <button class="buttons" id="save">Save Palette</button>
-
-            </section> 
-          </div> 
+            </section>
+          </div>
        </div>
        <div class="wrapper2">
        <section class="saved-pallets-section">
@@ -85,5 +85,5 @@
       <script src="color.js"></script>
       <script scr="palette.js"></script>
       </body>
-     </html>            
-  </html>               
+     </html>
+  </html>
