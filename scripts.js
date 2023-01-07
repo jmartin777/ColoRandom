@@ -15,6 +15,7 @@ var color5 = new Color()
 //var allColors = new Palette(firstColor, secondColor, thirdColor, fourthColor, fifthColor)
 var allColors = new Palette(newRandomColor());
 var rightSection = document. querySelector('.right-section')
+var savedPalettesContainer = document.querySelector('#savedBox1')
 var locked1 = document.querySelector('#lock1')
 var locked2 = document.querySelector('#lock2')
 var locked3 = document.querySelector('#lock3')
@@ -33,13 +34,19 @@ var buttonNewPalette = document.getElementById('new');
 var buttonSavePalette = document.getElementById('save');
 
 window.addEventListener('load', updatePalette);
-// buttonSavePalette.addEventListener('click', )
+buttonSavePalette.addEventListener('click', saveButtonClick)
 buttonNewPalette.addEventListener('click', updatePalette);
 
 function updatePalette() {
-  allColors.colors = newRandomColor();
+  allColors = new Palette(newRandomColor()) ;
   setRandomColor();
 
+}
+
+function saveButtonClick() {
+  savePalette()
+  updatePalette()
+  renderRightSection()
 }
 
 function newRandomColor() {
@@ -70,22 +77,25 @@ function setRandomColor() {
 
 
 
-// function savePalette() {
-//   savedPaletteSection.push(currentPalette) rightSection.innerHTML = `<div class="right-section">
-//   <h2>Saved Palettes</h2>
-//     <article class="savedBox" style="background-color:" id="savedBox1"></article></div>`
-//     // for (var i = 0; i <savedPaletteSection.length; i++) {
+function savePalette() {
+  savedPalettes.push(allColors)
+}
 
-//     }
-// }
+function renderRightSection() {
+  savedPalettesContainer.innerHTML = ''
+  for(var i = 0; i < savedPalettes.length; i ++) {
+    savedPalettesContainer.innerHTML += `<section class="mini-palette">
+    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[0]}"></div>   
+    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[1]}"></div>
+    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[2]}"></div>   
+    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[3]}"></div>
+    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[4]}"></div>
+  </section>
+ `
 
+  }
 
-// function savePalette() {
-//   savedPalettes.push(currentPalette) asideSection.innerHTML = ""
-//   for (var i = 0; i < savedPalettes.length; i++) {
-//   var colors = savedPalettes[i].colors var paletteId = savedPalettes[i].id   
-//   createSection(colors, paletteId)
-//   }
+}
 
 
 

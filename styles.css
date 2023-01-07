@@ -134,6 +134,18 @@ main {
   width: 132px
 }
 
+.mini-palette {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mini-box-details {
+ 
+  height: 50px;
+  width: 50px;
+
+}
+
 .hidden {
   display : none;
 }
