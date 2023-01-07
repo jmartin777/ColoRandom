@@ -3,12 +3,15 @@ var color2 = new Color()
 var color3 = new Color()
 var color4 = new Color()
 var color5 = new Color()
-var firstColor = color1.getRandomColor()
-var secondColor = color2.getRandomColor()
-var thirdColor = color3.getRandomColor()
-var fourthColor = color4.getRandomColor()
-var fifthColor = color5.getRandomColor()
-var allColors = new Palette(firstColor, secondColor, thirdColor, fourthColor, fifthColor )
+// var firstColor = color1.getRandomColor()
+// var secondColor = color2.getRandomColor()
+// var thirdColor = color3.getRandomColor()
+// var fourthColor = color4.getRandomColor()
+// var fifthColor = color5.getRandomColor()
+
+//var allColors = new Palette(firstColor, secondColor, thirdColor, fourthColor, fifthColor)
+var allColors = new Palette(newRandomColor());
+
 var locked1 = document.querySelector('#lock1')
 var locked2 = document.querySelector('#lock2')
 var locked3 = document.querySelector('#lock3')
@@ -23,18 +26,40 @@ var boxes = document.querySelectorAll('.box')
 var colorBoxContainer = document.querySelector('.color-boxes-container')
 var codes = document.querySelectorAll('.color-hex')
 
-window.addEventListener('load',setRandomColor);
+var buttonNewPalette = document.getElementById('new');
+var buttonSavePalette = document.getElementById('save');
 
+window.addEventListener('load', updatePalette);
 
+buttonNewPalette.addEventListener('click', updatePalette);
+
+function updatePalette() {
+  allColors.colors = newRandomColor();
+  setRandomColor();
+
+}
+
+function newRandomColor() {
+  var firstColor = color1.getRandomColor()
+  var secondColor = color2.getRandomColor()
+  var thirdColor = color3.getRandomColor()
+  var fourthColor = color4.getRandomColor()
+  var fifthColor = color5.getRandomColor()
+
+var NewPaletteOnClick = [firstColor, secondColor, thirdColor, fourthColor, fifthColor];
+
+return NewPaletteOnClick;
+}
 
 function setRandomColor() {
+  
   for (let i = 0; i < 5; i++) {
     boxes[i].innerHTML = `
     <div class="box-details" style="background-color:${allColors.colors[i]}">
     <p class="color-hex" id="code1">${allColors.colors[i]}</p>
       <span class="material-symbols-outlined">
       <button class="unlock-emoji"id="unlock1">🔓</button>
-      <button class="lock-emoji hidden" id="lock1">🔒</button>
+      <button class="lock-emoji hidden" id="lock1">🔐</button>
     </span>
   </div>`
   }
