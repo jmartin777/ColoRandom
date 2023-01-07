@@ -1,3 +1,7 @@
+// Global Variables  ===
+var currentPalette
+var savedPalettes = []
+
 var color1 = new Color()
 var color2 = new Color()
 var color3 = new Color()
@@ -8,10 +12,9 @@ var color5 = new Color()
 // var thirdColor = color3.getRandomColor()
 // var fourthColor = color4.getRandomColor()
 // var fifthColor = color5.getRandomColor()
-
 //var allColors = new Palette(firstColor, secondColor, thirdColor, fourthColor, fifthColor)
 var allColors = new Palette(newRandomColor());
-
+var rightSection = document. querySelector('.right-section')
 var locked1 = document.querySelector('#lock1')
 var locked2 = document.querySelector('#lock2')
 var locked3 = document.querySelector('#lock3')
@@ -30,7 +33,7 @@ var buttonNewPalette = document.getElementById('new');
 var buttonSavePalette = document.getElementById('save');
 
 window.addEventListener('load', updatePalette);
-
+// buttonSavePalette.addEventListener('click', )
 buttonNewPalette.addEventListener('click', updatePalette);
 
 function updatePalette() {
@@ -64,6 +67,29 @@ function setRandomColor() {
   </div>`
   }
 }
+
+
+
+// function savePalette() {
+//   savedPaletteSection.push(currentPalette) rightSection.innerHTML = `<div class="right-section">
+//   <h2>Saved Palettes</h2>
+//     <article class="savedBox" style="background-color:" id="savedBox1"></article></div>`
+//     // for (var i = 0; i <savedPaletteSection.length; i++) {
+
+//     }
+// }
+
+
+// function savePalette() {
+//   savedPalettes.push(currentPalette) asideSection.innerHTML = ""
+//   for (var i = 0; i < savedPalettes.length; i++) {
+//   var colors = savedPalettes[i].colors var paletteId = savedPalettes[i].id   
+//   createSection(colors, paletteId)
+//   }
+
+
+
+
 //    function lockColor() {
    
 //     unlocked1.classList.add('hidden')
