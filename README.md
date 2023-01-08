@@ -2,15 +2,12 @@
 
 ### Abstract:
 [//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
-We built and application for users to select a palette of color of their choosing. A palette of five colors is displayed when the page loads. 
-If the user likes the page, they can press a "save palette" button and that palette will be saved to the right section of the page. If the user wants 
-to see another random selection of colors, they can press the "new palette" button and a five random colors will appear in the main section of the page. 
-The user can also lock and unlock individual colors of the main palette displayed on the page so that they can save colors within the pallet and continue 
-refreshing the unlocked colors.
+We built an application for users to select a palette of color of their choosing. A palette of five colors is displayed when the page loads. 
+If the user likes the selection of colors, they can press a "save palette" button and that palette will be saved to the right section of the page. If the user wants to see another random selection of colors, they can press the "new palette" button and a five random colors will appear in the main section of the page. The user can also lock and unlock individual colors of the main palette displayed on the page so that they can save colors within the pallet and continue refreshing the unlocked colors.
 
 ### Installation Instructions:
 [//]: <> (What steps does a person have to take to get your app cloned down and running?)
-Open up the terminal and past the SSH code after typing git clone in the terminal. Next enter the repesitory with the cd command. Then type code . and the
+Open up the terminal and paste the SSH code after typing git clone in the terminal. Next enter the repesitory with the cd command. Then type code . and the
 code will come up in the text editer. Then in the terminal type open index.html and the application will open in the browser.
 
 ### Preview of App:
@@ -26,7 +23,7 @@ We stuck to our schedule from beginning to end. We worked during the scheduled w
 https://github.com/Lexyful
 https://github.com/jmartin777
 https://github.com/chrometaphor
-https://github.com/CBradsen
+https://github.com/CBradsen, Carol Bradsen
 
 ### Learning Goals:
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
