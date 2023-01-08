@@ -1,4 +1,4 @@
-// Global Variables  ===
+
 var currentPalette
 var savedPalettes = []
 
@@ -7,12 +7,6 @@ var color2 = new Color()
 var color3 = new Color()
 var color4 = new Color()
 var color5 = new Color()
-// var firstColor = color1.getRandomColor()
-// var secondColor = color2.getRandomColor()
-// var thirdColor = color3.getRandomColor()
-// var fourthColor = color4.getRandomColor()
-// var fifthColor = color5.getRandomColor()
-//var allColors = new Palette(firstColor, secondColor, thirdColor, fourthColor, fifthColor)
 var allColors = new Palette(newRandomColor());
 var rightSection = document. querySelector('.right-section')
 var savedPalettesContainer = document.querySelector('#savedBox1')
@@ -25,13 +19,15 @@ var box5 = document.getElementById('box5')
 var boxes = document.querySelectorAll('.box')
 var colorBoxContainer = document.querySelector('.color-boxes-container')
 var codes = document.querySelectorAll('.color-hex')
-
 var buttonNewPalette = document.getElementById('new');
 var buttonSavePalette = document.getElementById('save');
+
+
 
 window.addEventListener('load', updatePalette);
 buttonSavePalette.addEventListener('click', saveButtonClick)
 buttonNewPalette.addEventListener('click', checkLock);
+window.addEventListener('click', deleteSavedPalette)
 box1.addEventListener('click', lockToggle)
 box2.addEventListener('click', lockToggle)
 box3.addEventListener('click', lockToggle)
@@ -50,29 +46,23 @@ function saveButtonClick() {
   renderRightSection()
 }
 
+function savePalette() {
+  savedPalettes.push(allColors)
+}
+
 function newRandomColor() {
   var color1 = new Color()
   var color2 = new Color()
   var color3 = new Color()
   var color4 = new Color()
   var color5 = new Color()
-  // var firstColor = color1.getRandomColor()
-  // var secondColor = color2.getRandomColor()
-  // var thirdColor = color3.getRandomColor()
-  // var fourthColor = color4.getRandomColor()
-  // var fifthColor = color5.getRandomColor()
-  
-    color1.getRandomColor()
-    color2.getRandomColor()
-    color3.getRandomColor()
-    color4.getRandomColor()
-    color5.getRandomColor()
-  
-
-
-var NewPaletteOnClick = [color1, color2, color3, color4, color5];
-
-return NewPaletteOnClick;
+      color1.getRandomColor()
+      color2.getRandomColor()
+      color3.getRandomColor()
+      color4.getRandomColor()
+      color5.getRandomColor()
+  var NewPaletteOnClick = [color1, color2, color3, color4, color5];
+  return NewPaletteOnClick;
 }
 
 
@@ -91,20 +81,15 @@ function setRandomColor() {
 }
 
 
-
-function savePalette() {
-  savedPalettes.push(allColors)
-}
-
 function renderRightSection() {
   savedPalettesContainer.innerHTML = ''
   for(var i = 0; i < savedPalettes.length; i ++) {
     savedPalettesContainer.innerHTML += `<section class="mini-palette">
-    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[0]}"></div>   
-    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[1]}"></div>
-    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[2]}"></div>   
-    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[3]}"></div>
-    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[4]}"></div>
+    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[0].color}"></div>   
+    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[1].color}"></div>
+    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[2].color}"></div>   
+    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[3].color}"></div>
+    <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[4].color}"></div>
     <button class="trash-button" id="trash">🚫</button>
     </section>
     `
@@ -155,5 +140,14 @@ function updateLock() {
       unlock.classList.add('hidden')
       lock.classList.remove('hidden')
     }
+  }
+}
+
+function deleteSavedPalette (event) {
+  console.log("fire",event.target)
+  if(event.target.className === 'trash-button' ) {
+    var paletteToDelete = event.target.parentElement;
+    savedPalettesContainer.removeChild(paletteToDelete);
+    savedPalettes.splice();
   }
 }
