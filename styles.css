@@ -84,6 +84,10 @@ box-sizing: border-box;
   font-size: 20px;
 }
 
+.trash-button {
+  font-size: 20px;
+}
+
 .unlock-emoji {
   font-size: 20px;
 }
@@ -97,6 +101,7 @@ box-sizing: border-box;
   font-style: italic;
   font-weight: bold;
 }
+
 .right-section {
   float: right;
   width: 230px;
@@ -113,6 +118,8 @@ main {
   justify-content: center;
 
   }
+
+ 
 
 .wrapper1 {
   display: flex;
