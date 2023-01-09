@@ -86,8 +86,9 @@ inherits: false;
     justify-content: space-evenly;
     height: 40%;
     width: 85%;
+    cursor: pointer;
 }
-   }
+   
    .box-colors {
     float: left;
     box-sizing: border-box;
@@ -110,6 +111,7 @@ inherits: false;
   }
   .trash-button {
     font-size: 20px;
+    cursor: pointer;
   }
   .unlock-emoji {
     font-size: 20px;
