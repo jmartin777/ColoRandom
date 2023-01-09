@@ -80,6 +80,7 @@ h2 {
     flex-direction: row;
     justify-content: space-evenly;
     margin: 60px;
+    cursor: pointer;
    }
 
    .box-colors {
@@ -109,6 +110,7 @@ h2 {
 
   .trash-button {
     font-size: 22px;
+    cursor: pointer;
   }
 
   .unlock-emoji {
