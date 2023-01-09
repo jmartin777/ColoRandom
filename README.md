@@ -20,9 +20,9 @@ We stuck to our schedule from beginning to end. We worked during the scheduled w
 
 ### Contributors:
 [//]: <> (Who worked on this application? Link to their GitHubs.)
-https://github.com/Lexyful
-https://github.com/jmartin777
-https://github.com/chrometaphor
+https://github.com/Lexyful, Lexye Jordan
+https://github.com/jmartin777, Joshua Martin
+https://github.com/chrometaphor, Chris Cole
 https://github.com/CBradsen, Carol Bradsen
 
 ### Learning Goals:
