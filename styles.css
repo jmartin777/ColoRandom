@@ -1,150 +1,43 @@
 html {
-    font-family: 'Michroma', sans-serif;
-    height: 100%;
-    width: 100%;
-    flex-wrap: wrap;
-   }
-  body {
-    height: 100%;
-    width: 100%;
-    background: rgb(33,112,203);
-    background: rgb(38,38,38);
-  border: .5vmin solid;
+  font-family: 'Michroma', sans-serif;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: rgb(33,112,203);
+  background: rgb(38,38,38);
+  border: 1.5vmin solid;
   border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
-  
   animation: 10s rotate linear infinite;
   display: flex;
-    flex-direction: row;
-  
+  flex-direction: row;
+  border-style: inset;
 }
 
-
-
-@keyframes rotate {
-to {
-  --angle: 360deg;
-}
-}
-
-@property --angle {
-syntax: '<angle>';
-initial-value: 0deg;
-inherits: false;
+h1 {
+  font-size: 80px;
+  padding: 0;
+  margin: 0;
+  color: #D1D3D4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 25%;
 }
 
-   
-
-  h1 {
-    font-size: 80px;
-    padding: 0;
-    margin: 0;
-    color: #D1D3D4;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    height: 25%;
-   }
-  h2 {
-    color: #D1D3D4;
-    display: flex;
-    padding: 40px;
-    justify-content: center;
-   }
-   .box {
-    /* margin: 8px; */
-    height: 130px;
-    width: 130px;
-    display: flex;
-    flex-direction: row;
-  }
-   #box1 {
-    background-color: #0000ff;
-   }
-   #box2 {
-    background-color: #ff0000;
-   }
-   #box3 {
-    background-color: #ffff00;
-   }
-   #box4 {
-    background-color: #ffffff;
-   }
-   #box5 {
-    background-color: #ffa500;
-   }
-   .title {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-content: center;  
-    align-items: center;
-   }
-   .color-boxes-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 40%;
-    width: 85%;
-    cursor: pointer;
+h2 {
+  color: #D1D3D4;
+  display: flex;
+  padding: 40px;
+  justify-content: center;
 }
-   
-   .box-colors {
-    float: left;
-    box-sizing: border-box;
-   }
-   .color-box {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-   }
-  .color-hex {
-    color: #D1D3D4;
-    font-weight: regular;
-    /* margin-right: 10px; */
-    /* margin-bottom: -20px; */
-  }
-  .lock-emoji {
-    font-size: 20px;
-    background: transparent;
-    border: transparent;
-  }
-  .trash-button {
-    font-size: 20px;
-    cursor: pointer;
-  }
-  .unlock-emoji {
-    font-size: 20px;
-    background: transparent;
-    border: transparent;
-  }
 
-  /* .material-symbols-rounded {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
-  } */
-
-  .buttons {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-weight: bold;
-    font-size: 22pt;
-    width: 75%;
-  }
- .right-section {
-    float: right;
-    width: 230px;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0);
-    /* border: 5px solid black; */
-    /* padding: 33px; */
-    /* margin-right: 0px */
-  }
- main {
+main {
   flex: 70%;
   display: flex;
   justify-content: center;
@@ -153,123 +46,183 @@ inherits: false;
   align-content: center;
   align-items: center;
   width: 75%;
-  }
- .wrapper1 {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  height: 100%;
-  }
- .wrapper2 {
-  display: flex;
-  float: right;
-  /* margin-right: -41px; */
-  width: 25%;
-  flex-direction: column;
+}
 
-  }
- .box-details {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    width: 132px
-  }
-  .mini-palette {
-    margin-top: 8px;
-    display: flex;
-    justify-content: space-around;
-
-  }
-  .mini-box-details {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 1.2px;
-  }
- .hidden {
-    display : none;
-  }
-  
-.saved-palette-section {
-height: 90%;
+.wrapper1 {
 display: flex;
-flex-direction: column;
-justify-content: space-evenly;
 align-items: center;
+flex-direction: column;
+width: 100%;
+justify-content: center;
+height: 100%;
+}
+
+.wrapper2 {
+display: flex;
+float: right;
+width: 25%;
+flex-direction: column;
+}
+
+.right-section {
+  float: right;
+  width: 230px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.box {
+  height: 130px;
+  width: 130px;
+  display: flex;
+  flex-direction: row;
+}
+
+.box-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 132px
+}
+
+.color-boxes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 40%;
+  width: 85%;
+  cursor: pointer;
+}
+
+.color-hex {
+  color: #D1D3D4;
+  font-weight: regular;    
+}
+
+.lock-emoji, .unlock-emoji {
+  font-size: 20px;
+  background: transparent;
+  border: transparent;
+}
+
+.saved-palette-section {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.mini-palette {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mini-box-details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1.2px;
+}
+
+.trash-button {
+  font-size: 20px;
+  cursor: pointer;
+  background: transparent;
+  border: transparent;
+  color:  #D1D3D4;
+}
+
+.hidden {
+  display : none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: bold;
+  font-size: 22pt;
+  width: 75%;
 }
 
 .glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #222222;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin: 43px; */
-    /* font-style: italic; */
-    font-weight: regular;
-    
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #222222;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: regular;  
 }
 
 .glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
 }
 
-
-
-/* GLOW BUTTONS */
 .glow-on-hover:active {
-    color: #101010
+  color: #101010
     
 }
 
 .glow-on-hover:active:after {
-    background: transparent;
+  background: transparent;
     
 }
 
 .glow-on-hover:hover:before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+@keyframes rotate {
+  to {
+  --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }

@@ -35,14 +35,25 @@ function updatePalette() {
   allColors = new Palette(newRandomColor()) ;
   setRandomColor();
 }
+
 function saveButtonClick() {
   savePalette()
   updatePalette()
   renderRightSection()
 }
+
 function savePalette() {
   savedPalettes.push(allColors)
 }
+
+function deleteSavedPalette (event) {
+  if(event.target.className === 'trash-button') {
+   var paletteToDelete = event.target.parentElement;
+   savedPalettesContainer.removeChild(paletteToDelete);
+   savedPalettes.splice(savedPalettes.id);
+ }
+}
+
 function newRandomColor() {
   var color1 = new Color();
   var color2 = new Color();
@@ -57,6 +68,7 @@ function newRandomColor() {
   var NewPaletteOnClick = [color1, color2, color3, color4, color5];
   return NewPaletteOnClick;
 }
+
 function setRandomColor() {
   for (let i = 0; i < 5; i++) {
     boxes[i].innerHTML = `
@@ -69,6 +81,7 @@ function setRandomColor() {
   </div>`
   }
 }
+
 function renderRightSection() {
   savedPalettesContainer.innerHTML = ''
   for(var i = 0; i < savedPalettes.length; i ++) {
@@ -78,11 +91,11 @@ function renderRightSection() {
     <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[2].color}"></div>   
     <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[3].color}"></div>
     <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[4].color}"></div>
-    <button class="trash-button" id="trash">🚫</button>
-    </section>
-    `
+    <button class="trash-button" id="trash">Ⓧ</button>
+    </section>`
   }
 }
+
 function lockToggle (event) {
   console.log(event.target)
   for (var i = 1; i < 6; i++ ) {
@@ -95,6 +108,7 @@ function lockToggle (event) {
     }
   }
 }
+
 function checkLock(){
 if(allColors.colors[0].locked === false) { 
   allColors.colors[0].getRandomColor()
@@ -114,6 +128,7 @@ if(allColors.colors[4].locked === false) {
 setRandomColor()
 updateLock()
 }
+
 function updateLock() {
   for(var i=0; i < allColors.colors.length; i++) {
     if(allColors.colors[i].locked) {
@@ -122,12 +137,5 @@ function updateLock() {
       unlock.classList.add('hidden')
       lock.classList.remove('hidden')
     }
-  }
-}
-function deleteSavedPalette (event) {
-   if(event.target.className === 'trash-button') {
-    var paletteToDelete = event.target.parentElement;
-    savedPalettesContainer.removeChild(paletteToDelete);
-    savedPalettes.splice(savedPalettes.id);
   }
 }
