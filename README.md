@@ -12,6 +12,7 @@ code will come up in the text editer. Then in the terminal type open index.html 
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+![ColoRandom](https://user-images.githubusercontent.com/76410246/211423037-7685f237-e552-4f04-84ac-357fead2f848.gif)
 
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
@@ -38,3 +39,4 @@ We stayed very organized and focused thanks to the norms and the Trello board th
 with the help of pseudocoding and brainstorming together. We all had different strengths that we brought to the table and it made the group dynamic more productive.
 It took us a long time to build each function but we were resourceful using MDN and W3 schools for help to get us in the right direction. We reached out for help from 
 our rocks, mentors and classmates when we were stuck, and in the end we were all able to understand the code we wound up with.
+
