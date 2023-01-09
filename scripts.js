@@ -15,7 +15,7 @@ var box4 = document.getElementById('box4');
 var box5 = document.getElementById('box5');
 var buttonNewPalette = document.getElementById('new');
 var buttonSavePalette = document.getElementById('save');
-var rightSection = document. querySelector('.right-section');
+var rightSection = document.querySelector('.right-section');
 var savedPalettesContainer = document.querySelector('#savedBox1');
 var boxes = document.querySelectorAll('.box');
 var colorBoxContainer = document.querySelector('.color-boxes-container');
@@ -62,9 +62,11 @@ function setRandomColor() {
     boxes[i].innerHTML = `
     <div class="box-details" id="box${i+1}" style="background-color:${allColors.colors[i].color}">
     <p class="color-hex" id="code${i}">${allColors.colors[i].color}</p>
-      <span class="material-symbols-outlined">
-      <button class="unlock-emoji"id="unlock${i+1}">🔓</button>
-      <button class="lock-emoji hidden" id="lock${i+1}">🔐</button>
+    
+      <button class="unlock-emoji"id="unlock${i+1}"><span class="material-icons md-light">
+      lock_open</span></button>
+      <button class="lock-emoji hidden" id="lock${i+1}"><span class="material-icons">
+      lock</span></button>
     </span>
   </div>`
   }
@@ -78,7 +80,9 @@ function renderRightSection() {
     <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[2].color}"></div>   
     <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[3].color}"></div>
     <div class="mini-box-details" style="background-color:${savedPalettes[i].colors[4].color}"></div>
-    <button class="trash-button" id="trash">🚫</button>
+    <button class="trash-button" id="trash">
+      <span class="material-icons">delete_forever</span>
+      </button>
     </section>
     `
   }
