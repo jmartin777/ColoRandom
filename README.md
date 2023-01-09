@@ -19,6 +19,8 @@ code will come up in the text editer. Then in the terminal type open index.html 
 We stuck to our schedule from beginning to end. We worked during the scheduled work time that Turing provided on the schedule. After school we worked from 
 5pm-8pm MT. We worked for the whole day on Saturday and most of the day on Sunday. We came in at approximately 38 hours.
 
+https://trello.com/b/5xHlV86c/colorandom
+
 ### Contributors:
 [//]: <> (Who worked on this application? Link to their GitHubs.)
 https://github.com/Lexyful, Lexye Jordan
@@ -39,4 +41,6 @@ We stayed very organized and focused thanks to the norms and the Trello board th
 with the help of pseudocoding and brainstorming together. We all had different strengths that we brought to the table and it made the group dynamic more productive.
 It took us a long time to build each function but we were resourceful using MDN and W3 schools for help to get us in the right direction. We reached out for help from 
 our rocks, mentors and classmates when we were stuck, and in the end we were all able to understand the code we wound up with.
+
+https://www.notion.so/ColorProject-Mod-1-b7445c26d60f4fa99647943858d07623
 
